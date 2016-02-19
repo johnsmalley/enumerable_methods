@@ -26,7 +26,11 @@ module Enumerable
 	end
 
 	def my_all?
-		
-		
+		status = true
+		self.my do |element|
+			status = false if yield(element)
+		end
+		status
 	end
+
 end

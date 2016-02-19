@@ -16,4 +16,17 @@ module Enumerable
 		end
 		self
 	end
+
+	def my_select
+		return_array = []
+		self.my_each do |element|
+			return_array << element if yield(element)
+		end
+		return_array
+	end
+
+	def my_all?
+		
+		
+	end
 end
